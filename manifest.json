@@ -1,14 +1,13 @@
 {
   "manifest_version": 2,
 
-  "name": "Modify CSS and HTML",
+  "name": "NBCU catcher",
   "version": "0.1.0",
-  "description": "Lateral blog post demo extension",
+  "description": "Intercept NBCU content en pages",
+  "permissions": [ "webRequest", "webRequestBlocking", "<all_urls>"],
 
-  "content_scripts": [{
-    "css": ["styles.css"],
-    "js": ["content.js"],
-    "matches": ["https://blog.lateral.io/*"]
-  }]
+  "background": {
+      "scripts": ["intercept.js"]
+  }
 
 }
